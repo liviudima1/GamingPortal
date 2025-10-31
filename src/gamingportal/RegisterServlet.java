@@ -1,6 +1,7 @@
 package gamingportal;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -25,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
 		Connection connection = null;
 		try
 		{
-			DriverManager.getConnection("jdbc:mysql://localhost:3306/gamingportal?serverTimezone=UTC","root", "rootroot1");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamingportal?serverTimezone=UTC","root", "rootroot1");
 		}catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -44,6 +45,11 @@ public class RegisterServlet extends HttpServlet {
 		{
 			e1.printStackTrace();
 		}
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Response Page</title></head><body> Hello User. "
+				+ "Got it:.</br><h1> THANK YOU </h1> </body><html>");
 
 }
 }

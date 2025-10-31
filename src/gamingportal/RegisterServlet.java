@@ -33,9 +33,9 @@ public class RegisterServlet extends HttpServlet {
 		
 		try {
 			PreparedStatement registerUser = connection.prepareStatement(
-					"INSERT INTO players"
-					+ "(gamerTag)" + "(password)" + ("credits") 
-					+ " VALUES (?,?,500)");
+					"INSERT INTO players (gamerTag, password, credits) "
+					+ "VALUES (?, ?, 500)"
+					);
 			registerUser.setString(1, gamerTag);
 			registerUser.setString(2, password);
 			int rowsUpdated = registerUser.executeUpdate();

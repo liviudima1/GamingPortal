@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 		
 		try {
 			PreparedStatement checkUser = connection.prepareStatement(
-					"select * from gamingportal where name=? and password=?");
+					"SELECT * FROM players WHERE gamerTag=? and password=?");
 			checkUser.setString(1, gamerTag);
 			checkUser.setString(2, password);
 			
@@ -45,7 +45,6 @@ public class LoginServlet extends HttpServlet {
 			
 			if(rs.next())
 			{
-				HttpSession session = request.getSession();
 				response.sendRedirect("home.html");
 			}
 					

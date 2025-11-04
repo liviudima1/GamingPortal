@@ -16,10 +16,12 @@ public class HomeServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		
+		String gamerTag = request.getParameter("gamerTag");
+		
 		String creditsAdd = request.getParameter("creditsAdd");
 		
 		String creditsRemove = request.getParameter("creditsRemove");
-		
 		
 		Connection connection = null;
 		
@@ -32,17 +34,28 @@ public class HomeServlet extends HttpServlet {
 		}
 		
 		try {
-			PreparedStatement addCredits = connection.prepareStatement(
-					"SELECT * FROM players WHERE gamerTag=? and password=?");
-			addCredits.setString(1, credits);
-			checkUser.setString(2, password);
-			
-			ResultSet rs = checkUser.executeQuery();
-			
-			if(rs.next())
+		if(creditsAdd != null)
 			{
-				response.sendRedirect("home.html");
-			}
+			int creditsPlus = Integer.parseInt(creditsAdd);
+
+			PreparedStatement addCredits = connection.prepareStatement(
+					"UPDATE players SET credits = credits + ? WHERE gamerTag = ?");
+			addCredits.setInt(1, creditsPlus);
+			addCredits.setString(2, gamerTag);
+			int rows = addCredits.executeUpdate();
+			}			
+		else if(creditsRemove != null)
+		{
+			int creditsMinus = Integer.parseInt(creditsRemove);
+
+			PreparedStatement removeCredits = connection.prepareStatement(
+					"UPDATE players SET credits = credits - ? WHERE gamerTag = ?");
+			removeCredits.setInt(1, creditsMinus);
+			removeCredits.setString(2, gamerTag);
+			int rows = removeCredits.executeUpdate();
+		}
+
+					
 					
 		}catch(SQLException e1)
 		{

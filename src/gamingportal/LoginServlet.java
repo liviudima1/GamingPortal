@@ -47,6 +47,10 @@ public class LoginServlet extends HttpServlet {
 			{
 				response.sendRedirect("home.html");
 			}
+			else 
+			{
+				out.println("<h2>Login Not Valin </h2>");
+			}
 					
 		}catch(SQLException e1)
 		{

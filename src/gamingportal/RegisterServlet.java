@@ -23,6 +23,11 @@ public class RegisterServlet extends HttpServlet {
 		String repeatPassword = request.getParameter("confirmPassword");
 
 		
+		if(password == null || repeatPassword == null || password.isEmpty() || repeatPassword.isBlank())
+		{
+			return;
+		}
+		
 		Connection connection = null;
 		try
 		{
@@ -41,15 +46,15 @@ public class RegisterServlet extends HttpServlet {
 			registerUser.setString(2, password);
 			int rowsUpdated = registerUser.executeUpdate();
 			registerUser.close();
+			
+			response.sendRedirect("login.html");
+
 		}catch(SQLException e1)
 		{
 			e1.printStackTrace();
 		}
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Response Page</title></head><body> Hello User. "
-				+ "Got it:.</br><h1> THANK YOU </h1> </body><html>");
+		
 
 }
 }

@@ -1,6 +1,7 @@
 package gamingportal;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -43,6 +44,11 @@ public class HomeServlet extends HttpServlet {
 			addCredits.setInt(1, creditsPlus);
 			addCredits.setString(2, gamerTag);
 			int rows = addCredits.executeUpdate();
+			
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("<html><head><title>Response Page</title></head><body> Hello User. "
+					+ "Got it:.</br><h1> THANK YOU </h1> </body><html>");
 			}			
 		else if(creditsRemove != null)
 		{
@@ -53,9 +59,14 @@ public class HomeServlet extends HttpServlet {
 			removeCredits.setInt(1, creditsMinus);
 			removeCredits.setString(2, gamerTag);
 			int rows = removeCredits.executeUpdate();
+			
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("<html><head><title>Response Page</title></head><body> Hello User. "
+					+ "Got it:.</br><h1> THANK YOU </h1> </body><html>");
 		}
 
-					
+	
 					
 		}catch(SQLException e1)
 		{

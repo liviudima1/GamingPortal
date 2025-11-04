@@ -18,8 +18,6 @@ public class LoginServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response )throws ServletException, IOException {
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		
 		String gamerTag = request.getParameter("gamerTag");
 		
@@ -49,6 +47,8 @@ public class LoginServlet extends HttpServlet {
 			}
 			else 
 			{
+				response.setContentType("text/html");
+				PrintWriter out = response.getWriter();
 				out.println("<h2>Login Not Valin </h2>");
 			}
 					

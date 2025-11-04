@@ -24,6 +24,16 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
+        <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>gamingportal.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
 </web-app>
 
 

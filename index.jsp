@@ -2,14 +2,32 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>You are under 18</title>
+        <title>Home Page</title>
     </head>
     <body>
-        <h1>We checked your age and you are <s:property value="age" /> and are UNDER 18!</h1>
+	
+	<h1>Welcome to BidHeaven</h1>
+
+	<p>
+		<a href="register.jsp">Register</a>
+    </p>
+		
+		
+		
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+

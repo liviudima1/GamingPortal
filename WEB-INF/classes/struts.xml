@@ -6,7 +6,7 @@
     <package name="default" extends="struts-default">
 
 	<action name="home">
-        <result>/home.jsp</result>
+        <result>/index.jsp</result>
     </action>
 		
     </package>

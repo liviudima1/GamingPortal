@@ -24,6 +24,11 @@
    	 	<result name="login">/login.jsp</result>
     	<result name="error">/error.jsp</result>
 	</action>
+	
+	<action name="users" class="Users" method="viewAllUsers">
+    	<result name="success">/users.jsp</result>
+   	 	<result name="error">/error.jsp</result>
+	</action>
 		
 		
     </package>

@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+
+	<action name="checkAge" class="CheckAge" method ="checkInputAge">
+        <result name="over18">/over18.jsp</result>
+	    <result name="under18">/under18.jsp</result>
+    </action>
+		
+    </package>
+</struts>

@@ -29,6 +29,11 @@
     	<result name="success">/users.jsp</result>
    	 	<result name="error">/error.jsp</result>
 	</action>
+	
+	<action name="viewUser" class="ViewUser" method="viewUser">
+    	<result name="success">/viewUser.jsp</result>
+    	<result name="error">/error.jsp</result>
+	</action>
 		
 		
     </package>

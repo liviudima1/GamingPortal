@@ -7,22 +7,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>All users - BidHeaven</title>
+        <title>Add item - BidHeaven</title>
     </head>
     <body>
 	
-	<h1>All Users</h1>
+	<h1>Add item for Sale</h1>
 
-	<table>
-	<s:iterator value="usernames">
-		<tr>
-			<td><s:property /></td>
-			<td><a href="viewUser.action?username=<s:property />">
-				View Profile
-			</a>
-		</tr>
-	</s:iterator>
-</table>
+	<s:form action="addItem">
+		<s:textfield name="title" label="Title" />
+        <s:textarea name="description" label="Description" />
+        <s:textfield name="startingPrice" label="Starting Price" />
+        <s:submit value="Add Item" />
+    </s:form>
+
 	<a href="loginSuccess.jsp">Back to Dashboard</a>
     </body>
 </html>

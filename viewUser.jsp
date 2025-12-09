@@ -7,23 +7,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Dashboard</title>
+        <title>View User - BidHeaven</title>
     </head>
     <body>
 	
-	<h1>Welcome to BidHeaven</h1>
+	<h1>User Profile/h1>
 
-	<p>
-	Logged in as
-	<s:property value="#session.currentUser" />
-	</p>
-		
-	<li><a href="profile.action">View my profile</a></li>
-	<li><a href="users.action">View all users</a></li> 
-	<li><a href="addItem.jsp">Add item for sale</a></li>
-	  
+	<p>Username: <s:property value="username" /></p>
+	<p>Full Name: <s:property value="fullName" /></p>
+	<p>Email: <s:property value="email" /></p>
 
-</body>
+	<a href="users.action">Back to All Users</a><br>
+	<a href="loginSuccess.jsp">Back to Dashboard</a>
+    </body>
 </html>
 
 

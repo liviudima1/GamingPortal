@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Register 
 {
 
-    private String username;//
+    private String username;//test
     private String password;
     private String email;
     private String fullName;

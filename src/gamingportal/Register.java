@@ -1,5 +1,10 @@
 package gamingportal;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Register 
 {
 
@@ -46,7 +51,37 @@ public class Register
     public String register() 
     {
        
-    	//test
-        return "success"; 
+    	Connection connection = null;
+    	PreparedStatement register = null;
+    	
+    	try 
+    	{
+    		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bidheaven?serverTimezone=UTC",
+    				"root", "rootroot1");
+    		
+    		String sql = "INSERT INTO users (username, password, email, full_name) " + 
+    		"VALUES (?, ?, ?, ?)";
+    		
+    		register = connection.prepareStatement(sql);
+    		register.setString(1, username);
+    		register.setString(2, password);
+    		register.setString(3, email);
+    		register.setString(4, fullName);
+    		
+    		int rows = register.executeUpdate();
+    		
+    		if(rows > 0)
+    		{
+    			return "success";
+    		}
+    		else 
+    		{
+    			return "error";
+    		}
+    		
+    	}catch (SQLException e) {
+    		e.printStackTrace();
+    		return "error";
+    	}
     }
 }

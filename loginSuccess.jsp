@@ -7,19 +7,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
+        <title>Dashboard</title>
     </head>
     <body>
 	
 	<h1>Welcome to BidHeaven</h1>
 
 	<p>
-		<a href="register.jsp">Register</a>
-		<a href="login.jsp">Login</a>
-    </p>
+	Logged in as
+	<s:property value="#session.currentUser" />
+	</p>
 		
-		
-		
+	<li><a href="profile.action">View my profile</a></li>
     </body>
 </html>
 

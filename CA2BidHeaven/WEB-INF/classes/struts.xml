@@ -5,9 +5,8 @@
 <struts>
     <package name="default" extends="struts-default">
 
-	<action name="checkAge" class="CheckAge" method ="checkInputAge">
-        <result name="over18">/over18.jsp</result>
-	    <result name="under18">/under18.jsp</result>
+	<action name="home">
+        <result>/home.jsp</result>
     </action>
 		
     </package>

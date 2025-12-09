@@ -14,8 +14,8 @@
 	<h1>Login to BidHeaven</h1>
 
 	<s:form action="login">
-		<s:textfield name="username" label"Username" />
-		<s:password name="password" label"Password" />
+		<s:textfield name="username" label="Username" />
+		<s:password name="password" label="Password" />
 		<s:submit value="Login" />
 	</s:form>
 		

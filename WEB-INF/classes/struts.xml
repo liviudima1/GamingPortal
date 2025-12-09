@@ -13,6 +13,11 @@
     <action name = "hello">
     	<result>/hello.jsp</result>
     </action>
+    
+	<action name="login" class="Login" method="login">
+		<result name="success">/index.jsp</result>
+		<result name="error">/login.jsp</result>
+	</action>
 		
     </package>
 </struts>

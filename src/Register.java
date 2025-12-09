@@ -1,4 +1,3 @@
-package gamingportal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +7,7 @@ import java.sql.SQLException;
 public class Register 
 {
 
-    private String username;
+    private String username;//
     private String password;
     private String email;
     private String fullName;
@@ -77,7 +76,7 @@ public class Register
     		else 
     		{
     			return "error";
-    		}
+    		}//
     		
     	}catch (SQLException e) {
     		e.printStackTrace();

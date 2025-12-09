@@ -11,13 +11,13 @@
     </head>
     <body>
 	
-	<h1>Register for BidHeaven<h1>
+	<h1>Register for BidHeaven</h1>
 
 	<s:form action="register">
 		<s:textfield name="username" label="Username" />
 		<s:password name="password" label="Password" />
-		<s:textfield name="email" label"Email" />
-		<s:textfield name"fullName" label="Full Name" />
+		<s:textfield name="email" label="Email" />
+		<s:textfield name="fullName" label="Full Name" />
 		<s:submit value="Register" />
 	</s:form>
 	

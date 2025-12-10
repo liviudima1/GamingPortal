@@ -25,6 +25,7 @@
 	<li><a href="makeBid.jsp">Make a bid</a></li>
 	<li><a href="myBids.action">View my bids</a></li>
 	<li><a href="viewBidsForItem.jsp">View all bids on an item</a></li>
+	<li><a href="logout.action">Log Out</a></li>
 
 </body>
 </html>

@@ -7,11 +7,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View User - BidHeaven</title>
+        <title>View User</title>
     </head>
     <body>
 	
-	<h1>User Profile/h1>
+	<h1>User Profile</h1>
 	<p>
 		Logged in as
 	<s:property value="#session.currentUser" />

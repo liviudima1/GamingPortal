@@ -11,7 +11,7 @@
 	<h1>Something went wrong</h1>
 
 		<p>An error occurred while processing your request</p>
-		<p><a href="register.jsp">Register</a></p>
+		<p><a href="loginSuccess.jsp">Dashboard</a></p>
 		
     </body>
 </html>

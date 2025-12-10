@@ -12,7 +12,11 @@
     <body>
 	
 	<h1>Add item for Sale</h1>
-
+	<p>
+		Logged in as
+	<s:property value="#session.currentUser" />
+	</p>
+	
 	<s:form action="addItem">
 		<s:textfield name="title" label="Title" />
         <s:textarea name="description" label="Description" />

@@ -7,26 +7,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>All users - BidHeaven</title>
+        <title>My Bids</title>
     </head>
     <body>
 	
-	<h1>All Users</h1>
+	<h1>My Bids</h1>
 	<p>
-	Logged in as
+		Logged in as
 	<s:property value="#session.currentUser" />
 	</p>
+	<table border="1">
+		<tr>
+			<th>Bid Information</th>
+		</tr>
 	
-	<table>
-	<s:iterator value="usernames">
+	<s:iterator value = "bids">
 		<tr>
 			<td><s:property /></td>
-			<td><a href="viewUser.action?username=<s:property />">
-				View Profile
-			</a>
 		</tr>
 	</s:iterator>
-</table>
+	</table>
+	
 	<a href="loginSuccess.jsp">Back to Dashboard</a>
     </body>
 </html>

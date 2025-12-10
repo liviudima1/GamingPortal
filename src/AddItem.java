@@ -49,6 +49,10 @@ public class AddItem implements SessionAware
 	    public String addItem()
 	    {
 	    	Object currentUser = session.get("currentUser");
+	    	if(currentUser == null)
+	    	{
+	    		return "login";
+	    	}
 	    	Connection connection = null;
 			PreparedStatement addItem = null;
 			ResultSet rs = null;

@@ -12,6 +12,10 @@
     <body>
 	
 	<h1>My Profile</h1>
+	<p>
+	Logged in as
+	<s:property value="#session.currentUser" />
+	</p>
 
 	<p>Username: <s:property value="username" /></p>
     <p>Email: <s:property value="email" /></p>

@@ -12,6 +12,10 @@
     <body>
 	
 	<h1>Make a bid</h1>
+	<p>
+		Logged in as
+	<s:property value="#session.currentUser" />
+	</p>
 
 	<p>Enter the ID of the item you want to bid on please</p>
 	

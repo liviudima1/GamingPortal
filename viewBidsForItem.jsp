@@ -7,26 +7,35 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>All users - BidHeaven</title>
+        <title>View Bids</title>
     </head>
     <body>
 	
-	<h1>All Users</h1>
+	<h1>View all bids on an item</h1>
 	<p>
-	Logged in as
+		Logged in as
 	<s:property value="#session.currentUser" />
 	</p>
 	
-	<table>
-	<s:iterator value="usernames">
+	<p>Enter the ID of the item you want to see the bids for: </p>
+	
+	<s:form action="viewBidsForItem">
+		<s:textfield name="itemId" label="Item ID" />
+		<s:submit value="Show Bids" />
+	</s:form>
+	
+	<table border="1">
 		<tr>
-			<td><s:property /></td>
-			<td><a href="viewUser.action?username=<s:property />">
-				View Profile
-			</a>
+			<th>Bid Information</th>
 		</tr>
-	</s:iterator>
-</table>
+		
+		<s:iterator value="bids">
+			<tr>
+				<td><s:property /></td>
+			</tr>
+		</s:iterator>
+	</table>
+	
 	<a href="loginSuccess.jsp">Back to Dashboard</a>
     </body>
 </html>

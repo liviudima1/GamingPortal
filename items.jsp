@@ -12,7 +12,11 @@
     <body>
 	
 	<h1>Items for sale</h1>
-
+	<p>
+		Logged in as
+	<s:property value="#session.currentUser" />
+	</p>
+	
 	<table border="1">
 	<tr>
 	<th>Items information</th>

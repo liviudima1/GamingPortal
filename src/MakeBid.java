@@ -43,6 +43,10 @@ public class MakeBid implements SessionAware {
 	public String makeBid()
 	{
 		Object currentUser = session.get("currentUser");
+		if(currentUser == null)
+		{
+			return "login";
+		}
 		String bidderUsername = currentUser.toString();
 		
 		Connection connection = null;
@@ -53,8 +57,8 @@ public class MakeBid implements SessionAware {
 	                "jdbc:mysql://localhost:3306/bidheaven?serverTimezone=UTC",
 	                "root", "rootroot1");
 			
-			String sql = "INSERT INTO bids (item_id, bidder_username, bid_amount)" + 
-						"VALUES (?, ?, ?)";
+			String sql = "INSERT INTO bids (item_id, bidder_username, bid_amount) " + 
+		             "VALUES (?, ?, ?)";
 			
 			makeBid = connection.prepareStatement(sql);
 			makeBid.setInt(1, itemId);

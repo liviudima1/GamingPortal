@@ -22,7 +22,9 @@
 	<li><a href="users.action">View all users</a></li> 
 	<li><a href="addItem.jsp">Add item for sale</a></li>
 	<li><a href="viewItems.action">View all items for sale</a></li>
-	  
+	<li><a href="makeBid.jsp">Make a bid</a></li>
+	<li><a href="myBids.action">View my bids</a></li>
+	<li><a href="viewBidsForItem.jsp">View all bids on an item</a></li>
 
 </body>
 </html>

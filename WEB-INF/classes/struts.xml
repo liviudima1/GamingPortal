@@ -40,6 +40,17 @@
 		<result name ="login">/login.jsp</result>
 		<result name="error">/error.jsp</result>
 	</action>
-		
+	
+	<action name="viewItems" class="ViewItems" method="viewItems">
+		<result name="success">/items.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="makeBid" class="MakeBid" method="makeBid">
+		<result name="success">/loginSuccess.jsp</result>
+		<result name="login">/login.jsp</result>
+    	<result name="error">/error.jsp</result>
+	</action>
+	
     </package>
 </struts>

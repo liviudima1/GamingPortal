@@ -21,6 +21,7 @@
 	<li><a href="profile.action">View my profile</a></li>
 	<li><a href="users.action">View all users</a></li> 
 	<li><a href="addItem.jsp">Add item for sale</a></li>
+	<li><a href="viewItems.action">View all items for sale</a></li>
 	  
 
 </body>

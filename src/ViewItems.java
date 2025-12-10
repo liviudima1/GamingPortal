@@ -26,7 +26,7 @@ public class ViewItems {
 			connection = DriverManager.getConnection(
 	                "jdbc:mysql://localhost:3306/bidheaven?serverTimezone=UTC",
 	                "root", "rootroot1");
-			String sql = "SELECT title, seller_username, starting_price FROM items";
+			String sql = "SELECT id, title, seller_username, starting_price FROM items";
 			viewItems = connection.prepareStatement(sql);
 			rs = viewItems.executeQuery();
 			
@@ -35,8 +35,9 @@ public class ViewItems {
 				String title = rs.getString("title");
 				String seller = rs.getString("seller_username");
 				double price = rs.getDouble("starting_price");
+				int id = rs.getInt("id");
 				
-				String row = title + " Seller Name: " + "Bid Starting Price: " + price;
+				String row = "[ID: " + id + "] Item: " + title + " Seller Name: " + seller + "Bid Starting Price: " + price;
 				items.add(row);
 				
 		

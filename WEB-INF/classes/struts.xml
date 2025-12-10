@@ -10,9 +10,6 @@
         <result name="error">/error.jsp</result>
     </action>
     
-    <action name = "hello">
-    	<result>/hello.jsp</result>
-    </action>
     
 	<action name="login" class="Login" method="login">
  	   <result name="success" type="redirect">loginSuccess.jsp</result>
